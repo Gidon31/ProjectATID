@@ -4,7 +4,7 @@ import { ProductPage } from '../pages/ProductPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 
-test.describe('ATID Store – Cart & Checkout flows', () => {
+test.describe.serial('ATID Store - Cart & Checkout flows', () => {
   test('Scenario 1 Guest checkout journey (up to payment)', async ({ page }) => {
     const storePage = new StorePage(page);
     const productPage = new ProductPage(page);

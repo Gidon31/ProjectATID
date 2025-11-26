@@ -3,7 +3,7 @@ import { StorePage } from '../pages/StorePage';
 import { ProductPage } from '../pages/ProductPage';
 import { CartPage } from '../pages/CartPage';
 
-test.describe('Out-of-stock behavior & session isolation', () => {
+test.describe('ATID Store - Out-of-stock behavior & session isolation', () => {
   test('Out-of-stock product + isolated carts between contexts', async ({ browser }) => {
     const contextA = await browser.newContext();
     const contextB = await browser.newContext();

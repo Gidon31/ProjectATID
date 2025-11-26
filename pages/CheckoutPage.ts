@@ -18,6 +18,11 @@ export class CheckoutPage {
     await expect(this.billingAddress1).toBeVisible();
   }
 
+  async fillEmail(email: string) {
+    await this.page.locator('#billing_email').fill(email);
+  }
+  
+
   async fillValidGuestData() {
     await this.billingFirstName.fill('Form');
     await this.billingLastName.fill('Validation');

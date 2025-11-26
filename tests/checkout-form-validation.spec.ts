@@ -4,7 +4,7 @@ import { ProductPage } from '../pages/ProductPage';
 import { CartPage } from '../pages/CartPage';
 import { CheckoutPage } from '../pages/CheckoutPage';
 
-test.describe('Checkout form validation & data persistence', () => {
+test.describe('ATID Store - Checkout form validation & data persistence', () => {
   test('Invalid email shows errors and keeps other data', async ({ page }) => {
     const storePage = new StorePage(page);
     const productPage = new ProductPage(page);
@@ -35,9 +35,8 @@ test.describe('Checkout form validation & data persistence', () => {
     expect(after.lastName).toBe(before.lastName);
     expect(after.address).toBe(before.address);
 
-    await page.locator('#billing_email').fill('fixed.email@example.com');
+    await checkoutPage.fillEmail('email@example.com');
     await checkoutPage.placeOrder();
-
     await checkoutPage.assertStillOnCheckoutPage();
 
 });
