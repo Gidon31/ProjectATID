@@ -85,7 +85,7 @@ npx playwright test --reporter=html
 npx playwright show-report
 ```
 
-### Allure Report (if enabled)
+### Allure Report
 ```
 allure generate allure-results --clean -o allure-report
 allure open allure-report
@@ -118,3 +118,4 @@ https://atid.store/
 
 ##  Project Code Name
 ProjectATID
+
