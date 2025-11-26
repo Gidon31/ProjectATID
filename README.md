@@ -32,6 +32,8 @@ project/
 ├── utils/
 │   └── priceUtils.ts
 │
+├── package-lock.json
+├── package.json
 ├── playwright.config.ts
 └── README.md
 ```
@@ -118,5 +120,6 @@ https://atid.store/
 
 ##  Project Code Name
 ProjectATID
+
 
 
