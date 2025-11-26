@@ -4,5 +4,10 @@ export default defineConfig({
   use: {
     baseURL: 'https://atid.store/',
     headless: true
-  }
+  },
+  
+  reporter: [
+    ['list'],
+    ['allure-playwright']
+  ],
 });
