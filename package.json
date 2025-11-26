@@ -1,0 +1,22 @@
+{
+  "name": "projectatid",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "ai-agent": "ts-node ai-playwright-agent.ts",
+    "ai-agent:guest": "ts-node ai-playwright-agent.ts tests/guest-checkout.spec.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
