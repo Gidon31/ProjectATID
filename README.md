@@ -9,7 +9,7 @@ Built with **Playwright + TypeScript** using a **Page Object Model (POM)** archi
 - TypeScript
 - Playwright Test
 - Page Object Model (POM)
-- Allure Reporting (optional)
+- Allure Reporting
 - HTML Report + Traces + Screenshots
 
 ---
@@ -32,6 +32,8 @@ project/
 ├── utils/
 │   └── priceUtils.ts
 │
+├── package-lock.json
+├── package.json
 ├── playwright.config.ts
 └── README.md
 ```
@@ -85,7 +87,7 @@ npx playwright test --reporter=html
 npx playwright show-report
 ```
 
-### Allure Report (if enabled)
+### Allure Report
 ```
 allure generate allure-results --clean -o allure-report
 allure open allure-report
@@ -118,3 +120,6 @@ https://atid.store/
 
 ##  Project Code Name
 ProjectATID
+
+
+
