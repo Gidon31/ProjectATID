@@ -22,23 +22,53 @@ export class CheckoutPage {
     await this.page.locator('#billing_email').fill(email);
   }
   
+private randomString(length = 6) {
+  const chars = 'abcdefghijklmnopqrstuvwxyz';
+  return Array.from({ length }, () => chars[Math.floor(Math.random() * chars.length)]).join('');
+}
 
-  async fillValidGuestData() {
-    await this.billingFirstName.fill('Form');
-    await this.billingLastName.fill('Validation');
-    await this.billingEmail.fill('form.validation@example.com');
-    await this.billingAddress1.fill('Main street 5');
+private randomNumber(length = 6) {
+  return Array.from({ length }, () => Math.floor(Math.random() * 10)).join('');
+}
 
-    if (await this.billingCity.count()) {
-      await this.billingCity.fill('Tel Aviv');
-    }
-    if (await this.billingPostcode.count()) {
-      await this.billingPostcode.fill('55555');
-    }
-    if (await this.billingPhone.count()) {
-      await this.billingPhone.fill('+15555555555');
-    }
+private randomEmail() {
+  return `${this.randomString(7)}@example.com`;
+}
+
+async fillValidGuestData() {
+  const first = this.randomString(5);
+  const last = this.randomString(7);
+  const email = this.randomEmail();
+  const address = `${Math.floor(Math.random() * 1000) + 1} ${this.randomString(100)} Street`;
+  const city = 'Tel Aviv';
+  const postcode = this.randomNumber(5);
+  const phone = `+1${this.randomNumber(10)}`;
+
+  await this.billingFirstName.fill(first);
+  await this.billingLastName.fill(last);
+  await this.billingEmail.fill(email);
+  await this.billingAddress1.fill(address);
+
+  if (await this.billingCity.count()) {
+    await this.billingCity.fill(city);
   }
+  if (await this.billingPostcode.count()) {
+    await this.billingPostcode.fill(postcode);
+  }
+  if (await this.billingPhone.count()) {
+    await this.billingPhone.fill(phone);
+  }
+
+  return {
+    firstName: first,
+    lastName: last,
+    email,
+    address,
+    city,
+    postcode,
+    phone,
+  };
+}
 
   async fillRequiredGuestFields() {
     await this.fillValidGuestData();
