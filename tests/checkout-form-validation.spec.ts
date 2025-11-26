@@ -11,6 +11,7 @@ test.describe('ATID Store - Checkout form validation & data persistence', () => 
     const cartPage = new CartPage(page);
     const checkoutPage = new CheckoutPage(page);
 
+    
     await storePage.goto();
     await storePage.openFirstInStockProduct();
     await productPage.selectFirstVariantIfExists();
