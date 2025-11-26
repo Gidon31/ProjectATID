@@ -9,7 +9,7 @@ Built with **Playwright + TypeScript** using a **Page Object Model (POM)** archi
 - TypeScript
 - Playwright Test
 - Page Object Model (POM)
-- Allure Reporting (optional)
+- Allure Reporting
 - HTML Report + Traces + Screenshots
 
 ---
@@ -118,4 +118,5 @@ https://atid.store/
 
 ##  Project Code Name
 ProjectATID
+
 
