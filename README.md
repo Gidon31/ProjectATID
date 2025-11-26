@@ -10,7 +10,7 @@ Built with **Playwright + TypeScript** using a **Page Object Model (POM)** archi
 - Playwright Test
 - Page Object Model (POM)
 - Allure Reporting
-- HTML Report + Traces + Screenshots
+- HTML Report
 
 ---
 
@@ -120,6 +120,7 @@ https://atid.store/
 
 ##  Project Code Name
 ProjectATID
+
 
 
 
